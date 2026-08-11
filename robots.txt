@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.astraglobalsolution.com/sitemap.xml
+
+# Block component fragments from indexing
+Disallow: /components/

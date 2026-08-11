@@ -1,0 +1,555 @@
+/* ========================================
+   Responsive Styles
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer-company {
+    grid-column: span 2;
+  }
+
+  .footer-newsletter {
+    grid-column: span 2;
+  }
+
+  .stats-grid,
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-astra-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-astra-media {
+    position: relative;
+    top: auto;
+  }
+
+  .about-mv-row {
+    grid-template-columns: 1fr;
+  }
+
+  .services-showcase-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid,
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .life-grid,
+  .apply-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .life-gallery {
+    grid-template-rows: repeat(2, 160px);
+  }
+
+  .process-steps::before {
+    display: none;
+  }
+
+  .process-steps-row {
+    grid-template-columns: repeat(3, 1fr);
+    min-width: unset;
+  }
+
+  .process-track {
+    display: none;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .services-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .contact-social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-showcase-grid,
+  .portfolio-grid,
+  .industries-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+
+  .contact-channels-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-link {
+    padding: 10px 10px;
+    font-size: 0.8125rem;
+  }
+
+  .btn-nav-cta {
+    padding: 10px 18px;
+    font-size: 0.8125rem;
+  }
+
+  .logo-text {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 70px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* ── Premium Navbar — Mobile ── */
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-cta-desktop {
+    display: none;
+  }
+
+  .navbar-cta-mobile {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 16px 24px;
+  }
+
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 85vw);
+    height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: calc(var(--navbar-height) + 24px) 24px 32px;
+    background: rgba(5, 11, 24, 0.92);
+    backdrop-filter: blur(var(--glass-blur-heavy)) saturate(var(--glass-saturate));
+    -webkit-backdrop-filter: blur(var(--glass-blur-heavy)) saturate(var(--glass-saturate));
+    border-left: 1px solid var(--glass-border);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    overflow-y: auto;
+    z-index: 2;
+  }
+
+  .navbar-nav.open {
+    transform: translateX(0);
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 14px 16px;
+    font-size: var(--text-base);
+    width: 100%;
+    border-radius: var(--radius-md);
+  }
+
+  .nav-link::after {
+    bottom: 8px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .nav-link:hover {
+    background: var(--glass-bg);
+  }
+
+  .nav-link.active {
+    background: rgba(0, 91, 255, 0.12);
+  }
+
+  .logo-text {
+    font-size: var(--text-base);
+  }
+
+  .navbar-overlay {
+    z-index: 1;
+  }
+
+  /* Hero — mobile */
+  .hero-content {
+    padding: 40px 0 80px;
+  }
+
+  .hero-glow--1 { width: 280px; height: 280px; }
+  .hero-glow--2 { width: 220px; height: 220px; }
+  .hero-glow--3 { width: 180px; height: 180px; }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+
+  .hero-scroll {
+    bottom: 24px;
+  }
+
+  /* Grids */
+  .stats-grid,
+  .about-stats,
+  .about-mv-row,
+  .services-showcase-grid,
+  .services-grid,
+  .industries-showcase-grid,
+  .industries-stats,
+  .industries-grid,
+  .values-grid,
+  .team-grid,
+  .benefits-grid,
+  .portfolio-showcase-grid,
+  .portfolio-grid,
+  .industries-cards,
+  .offices-grid,
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-astra-image-wrap img {
+    height: 360px;
+  }
+
+  .about-astra-float-badge {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .about-stat-card {
+    padding: 28px 16px;
+  }
+
+  /* Why Choose Astra — mobile timeline */
+  .why-timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .why-item,
+  .why-item--left,
+  .why-item--right {
+    width: 100%;
+    margin: 0;
+    padding: 0 0 40px 56px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .why-item--left .why-dot,
+  .why-item--right .why-dot {
+    left: 0;
+    right: auto;
+    top: 24px;
+  }
+
+  .why-item--left .why-card,
+  .why-item--right .why-card {
+    margin: 0;
+  }
+
+  .why-item--left .why-icon,
+  .why-item--right .why-icon {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* Process Workflow — scrollable on mobile */
+  .process-timeline {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+  }
+
+  .process-steps-row {
+    grid-template-columns: repeat(5, minmax(200px, 1fr));
+    min-width: 900px;
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  .process-track {
+    left: 5%;
+    right: 5%;
+    min-width: 860px;
+  }
+
+  /* Timeline */
+  .timeline-list::before {
+    left: 16px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd) {
+    flex-direction: row;
+    padding-left: 48px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .timeline-dot {
+    left: 16px;
+  }
+
+  /* Service cards */
+  .service-card {
+    flex-direction: column;
+    padding: 32px;
+    gap: 16px;
+  }
+
+  /* Contact form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrapper,
+  .apply-form-wrapper,
+  .contact-form-panel {
+    padding: 32px 24px;
+  }
+
+  .map-container {
+    height: 320px;
+  }
+
+  .contact-channels {
+    padding-top: 48px;
+  }
+
+  .careers-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .careers-search {
+    max-width: none;
+  }
+
+  .careers-filters {
+    justify-content: flex-start;
+  }
+
+  .job-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .life-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .life-gallery-item:first-child {
+    grid-row: auto;
+    height: 240px;
+  }
+
+  .life-gallery-item {
+    height: 180px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-company,
+  .footer-newsletter {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  .page-hero {
+    padding: calc(var(--navbar-height) + 48px) 0 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-nav {
+    width: 100vw;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .partners-grid {
+    gap: 24px;
+  }
+
+  .partner-logo {
+    font-size: 1rem;
+  }
+
+  .portfolio-tabs {
+    gap: 8px;
+  }
+
+  .portfolio-tab {
+    padding: 9px 16px;
+    font-size: var(--text-xs);
+  }
+
+  .portfolio-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lightbox-panel {
+    width: 96vw;
+  }
+
+  .lightbox-info {
+    padding: 20px;
+  }
+
+  .portfolio-filter {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.8125rem;
+  }
+
+  .testimonial-nav {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .testimonial-prev,
+  .testimonial-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .testimonial-slide-card {
+    padding: 24px 20px;
+  }
+}

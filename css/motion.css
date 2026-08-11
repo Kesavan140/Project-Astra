@@ -1,0 +1,109 @@
+/* ========================================
+   Motion System — GSAP · AOS · ScrollTrigger
+   ======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Page transition overlay */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--dark, #050B18);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-transition.is-active {
+  visibility: visible;
+  pointer-events: all;
+}
+
+body.is-transitioning {
+  overflow: hidden;
+}
+
+/* Text reveal — initial state (GSAP animates in) */
+.text-reveal .reveal-word,
+.text-reveal .reveal-line {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(1.1em);
+}
+
+body.motion-ready .text-reveal .reveal-word,
+body.motion-ready .text-reveal .reveal-line {
+  will-change: transform, opacity;
+}
+
+body.motion-reduced .text-reveal .reveal-word,
+body.motion-reduced .text-reveal .reveal-line {
+  opacity: 1;
+  transform: none;
+}
+
+/* Parallax layers */
+[data-parallax] {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-parallax] {
+    will-change: auto;
+  }
+}
+
+/* Card animation initial state */
+.motion-card {
+  opacity: 0;
+  transform: translateY(36px);
+}
+
+body.motion-reduced .motion-card,
+body.motion-reduced .fade-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Fade-in fallback (no GSAP) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.motion-reduced .fade-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Counter */
+.counter-animate {
+  font-variant-numeric: tabular-nums;
+}
+
+/* AOS dark theme overrides */
+[data-aos] {
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
