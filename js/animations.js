@@ -424,7 +424,7 @@ function initSectionSpecificAnimations() {
   batchReveal('.svc-card', { y: 60, rotateX: 8, stagger: 0.1, duration: 0.85 });
   batchReveal('.ind-card', { scale: 0.88, y: 40, ease: 'back.out(1.4)', stagger: 0.08 });
   batchReveal('.ind-stat-card', { y: 30, stagger: 0.1 });
-  batchReveal('.portfolio-card', { y: 40, stagger: 0.08 });
+  gsap.set('.portfolio-card', { opacity: 1, visibility: 'visible', y: 0 });
   batchReveal('.card, .service-card, .glass-card', { y: 50 });
 
   gsap.from('.about-astra-media', {

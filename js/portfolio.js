@@ -145,20 +145,12 @@ function bindPortfolioFilters(tabsEl, gridEl) {
 
       cards.forEach(card => {
         const match = filter === 'all' || card.getAttribute('data-category') === filter;
-
-        if (typeof gsap !== 'undefined') {
-          gsap.to(card, {
-            opacity: match ? 1 : 0,
-            scale: match ? 1 : 0.92,
-            duration: 0.35,
-            onComplete: () => {
-              card.classList.toggle('hidden', !match);
-              if (match) card.style.opacity = '';
-            }
-          });
-        } else {
-          card.classList.toggle('hidden', !match);
-        }
+        card.classList.toggle('is-muted', !match);
+        card.style.opacity = match ? '1' : '0.38';
+        card.style.transform = match ? '' : 'scale(0.986)';
+        card.style.filter = match ? 'none' : 'grayscale(0.15) saturate(0.7)';
+        card.style.visibility = 'visible';
+        card.style.display = 'block';
       });
     });
   });
