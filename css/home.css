@@ -1169,7 +1169,7 @@ United recording of the high ports and schools
 .process-steps-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-very  gap: 14.4px;
+  gap: 14.4px;
   position: relative;
   z-index: 1;
 }
