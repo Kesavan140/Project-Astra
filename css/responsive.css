@@ -20,16 +20,16 @@
   }
 
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 40px;
   }
 
   .footer-company {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 
   .footer-newsletter {
-    grid-column: span 2;
+    grid-column: span 3;
   }
 
   .stats-grid,
