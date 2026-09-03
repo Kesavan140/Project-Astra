@@ -14,13 +14,13 @@
 
 .about-banner{
   background-image: url("../assets/images/about.png");
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #091827;
   width: 100%;
-  height: 100vh;
-  min-height: 280px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
   position: relative;
@@ -52,12 +52,7 @@
 }
 
 @media (max-width: 768px) {
-  .about-banner { height: 36vh; min-height: 200px; }
   .banner-title { font-size: clamp(1.5rem, 6vw, 2rem); }
-}
-
-@media (min-width: 1400px) {
-  .about-banner { height: 60vh; min-height: 360px; }
 }
 
  
