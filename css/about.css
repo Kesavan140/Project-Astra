@@ -75,6 +75,139 @@
   margin-bottom: 16px;
 }
 
+.about-intro-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.about-contact-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.about-contact-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.about-contact-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 6, 16, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.about-contact-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 440px);
+  background: rgba(10, 18, 37, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: var(--shadow-float);
+  padding: 24px 22px 20px;
+}
+
+.about-contact-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.about-contact-header {
+  margin-bottom: 18px;
+}
+
+.about-contact-header h3 {
+  color: var(--color-white);
+  font-size: 1.7rem;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.about-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.about-contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--color-text-primary);
+  font-size: 0.82rem;
+}
+
+.about-contact-form input,
+.about-contact-form select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-white);
+  font-size: 0.92rem;
+  outline: none;
+}
+
+.about-contact-form input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.about-contact-form select {
+  color: var(--color-white);
+}
+
+.about-contact-form select option {
+  color: #111827;
+  background: #ffffff;
+}
+
+.about-contact-form input:focus,
+.about-contact-form select:focus {
+  border-color: rgba(44, 213, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(44, 213, 255, 0.12);
+}
+
+.about-contact-submit {
+  margin-top: 6px;
+  width: 100%;
+  min-height: 42px;
+  font-size: 0.96rem;
+}
+
 .about-intro-image {
   border-radius: var(--radius-xl);
   overflow: hidden;
